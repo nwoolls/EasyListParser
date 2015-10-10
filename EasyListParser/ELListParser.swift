@@ -34,6 +34,8 @@ public class ELListParser {
                 }                
                 
                 entries.append(entry)
+            } catch ELParserError.InvalidInput(let error, let content) {
+                print("[\(error)] \(content)")
             } catch _ { }
         }
         return entries

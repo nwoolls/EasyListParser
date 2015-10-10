@@ -15,9 +15,12 @@ class ELLineParser {
     
     static func parse(line: String) throws -> ELBlockerEntry {
         
+        var error = "Unknown error"
+        
         if let char = line.characters.first {
             switch char {
             case "[", "!", "@" :
+                error = "Unsupported prefix: \(char)"
                 break
             default:
                 
@@ -41,6 +44,18 @@ class ELLineParser {
                     domainFilter = line
                 }
                 
+                if !domainFilter.canBeConvertedToEncoding(NSASCIIStringEncoding) {
+                    // limitation of RegEx in WebKit Content Blocker
+                    error = "Filter contains non-ASCII"
+                    break
+                }                
+            
+                if domainFilter.containsString("{") {
+                    // limitation of RegEx in WebKit Content Blocker
+                    error = "Filter contains {"
+                    break
+                }
+
                 let filterOptionParts: [String]
                 if !filterOptions.isEmpty {
                     filterOptionParts = filterOptions.componentsSeparatedByString(",")
@@ -48,30 +63,24 @@ class ELLineParser {
                 } else {
                     filterOptionParts = []
                 }
+
+                let entry = ELBlockerEntry()
+                entry.trigger.urlFilter = ELFilterParser.parse(domainFilter)
                 
-                if  // limitation of RegEx in WebKit Content Blocker
-                    domainFilter.canBeConvertedToEncoding(NSASCIIStringEncoding) &&
-                    // limitation of RegEx in WebKit Content Blocker
-                    !domainFilter.containsString("{") {
-                        
-                        let entry = ELBlockerEntry()
-                        entry.trigger.urlFilter = ELFilterParser.parse(domainFilter)
-                        
-                        if cssSelector.isEmpty {
-                            entry.action.type = ELBlockerEntry.Action.Type.Block.rawValue
-                        } else {
-                            entry.action.type = ELBlockerEntry.Action.Type.CssDisplayNone.rawValue
-                            entry.action.selector = cssSelector
-                        }
-                        
-                        try ELOptionParser.parse(filterOptionParts, destination: entry)
-                        
-                        return entry
+                if cssSelector.isEmpty {
+                    entry.action.type = ELBlockerEntry.Action.Type.Block.rawValue
+                } else {
+                    entry.action.type = ELBlockerEntry.Action.Type.CssDisplayNone.rawValue
+                    entry.action.selector = cssSelector
                 }
+                
+                try ELOptionParser.parse(filterOptionParts, destination: entry)
+                
+                return entry
             }
             
         }
-        
-        throw ELParserError.InvalidInput
+                
+        throw ELParserError.InvalidInput(error, line)
     }
 }

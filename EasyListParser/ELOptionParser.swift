@@ -50,7 +50,7 @@ class ELOptionParser {
                             }
                     } else {
                         // limitation of RegEx in WebKit Content Blocker
-                        throw ELParserError.InvalidInput
+                        throw ELParserError.InvalidInput("Options contain non-ASCII", options.description)
                     }
                 }
             } else if filterOption == FilterOption.ThirdParty.rawValue {
@@ -79,7 +79,7 @@ class ELOptionParser {
                 destination.trigger.resourceType!.append("raw")
             } else {
                 // we don't know enough about the entry's filter options
-                throw ELParserError.InvalidInput
+                throw ELParserError.InvalidInput("Unsupported option(s)", options.description)
             }
             
         }

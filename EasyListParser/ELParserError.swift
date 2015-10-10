@@ -9,5 +9,5 @@
 import Foundation
 
 enum ELParserError: ErrorType {
-    case InvalidInput
+    case InvalidInput(String, String)
 }
