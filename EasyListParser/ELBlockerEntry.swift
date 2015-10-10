@@ -8,10 +8,8 @@
 
 import Foundation
 
-public class ELBlockerEntry : Serializable {
-    
-    class Action : Serializable {
-        
+public class ELBlockerEntry {
+    class Action {
         enum Type : String {
             case Block
             case BlockCookies
@@ -20,28 +18,15 @@ public class ELBlockerEntry : Serializable {
         
         var type: String?
         var selector: String?
-        
-        override func formatValue(value: AnyObject?, forKey: String) -> AnyObject? {
-            if forKey == "type" {
-                if let typeValue = value as! String? {
-                    return typeValue.camelCaseToKebabCase()
-                }
-            }
-            return value
-        }
     }
     
-    class Trigger : Serializable {
+    class Trigger {
         var urlFilter: String?
         var urlFilterIsCaseSensitive: Bool?
         var resourceType: [String]?
         var loadType: [String]?
         var ifDomain: [String]?
         var unlessDomain: [String]?
-        
-        override func formatKey(key: String) -> String {
-            return key.camelCaseToKebabCase()
-        }
     }
     
     var action: Action = Action()

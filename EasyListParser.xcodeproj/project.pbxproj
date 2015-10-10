@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		D2302F8C1BC97A13004558E7 /* Array+Serializable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2302F8A1BC97A13004558E7 /* Array+Serializable.swift */; settings = {ASSET_TAGS = (); }; };
-		D2302F8D1BC97A13004558E7 /* Serializable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2302F8B1BC97A13004558E7 /* Serializable.swift */; settings = {ASSET_TAGS = (); }; };
 		D2302F8F1BC97B2D004558E7 /* String+Regex.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2302F8E1BC97B2D004558E7 /* String+Regex.swift */; settings = {ASSET_TAGS = (); }; };
 		D2A92A381BC9699C000DD1DC /* EasyListParser.h in Headers */ = {isa = PBXBuildFile; fileRef = D2A92A371BC9699C000DD1DC /* EasyListParser.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D2A92A3F1BC9699C000DD1DC /* EasyListParser.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D2A92A341BC9699C000DD1DC /* EasyListParser.framework */; settings = {ASSET_TAGS = (); }; };
@@ -24,6 +22,7 @@
 		D2A92A631BC96A47000DD1DC /* ELLineParserTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2A92A5E1BC96A47000DD1DC /* ELLineParserTests.swift */; settings = {ASSET_TAGS = (); }; };
 		D2A92A641BC96A47000DD1DC /* ELListParserTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2A92A5F1BC96A47000DD1DC /* ELListParserTests.swift */; settings = {ASSET_TAGS = (); }; };
 		D2A92A651BC96A47000DD1DC /* ELOptionParserTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2A92A601BC96A47000DD1DC /* ELOptionParserTests.swift */; settings = {ASSET_TAGS = (); }; };
+		D2E0C8861BC997FB008E1DBF /* ELBlockerEntry+Serialize.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2E0C8851BC997FB008E1DBF /* ELBlockerEntry+Serialize.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,8 +36,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		D2302F8A1BC97A13004558E7 /* Array+Serializable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Array+Serializable.swift"; path = "../swift-serializer/src/Array+Serializable.swift"; sourceTree = "<group>"; };
-		D2302F8B1BC97A13004558E7 /* Serializable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Serializable.swift; path = "../swift-serializer/src/Serializable.swift"; sourceTree = "<group>"; };
 		D2302F8E1BC97B2D004558E7 /* String+Regex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Regex.swift"; sourceTree = "<group>"; };
 		D2A92A341BC9699C000DD1DC /* EasyListParser.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = EasyListParser.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D2A92A371BC9699C000DD1DC /* EasyListParser.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EasyListParser.h; sourceTree = "<group>"; };
@@ -57,6 +54,7 @@
 		D2A92A5E1BC96A47000DD1DC /* ELLineParserTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ELLineParserTests.swift; sourceTree = "<group>"; };
 		D2A92A5F1BC96A47000DD1DC /* ELListParserTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ELListParserTests.swift; sourceTree = "<group>"; };
 		D2A92A601BC96A47000DD1DC /* ELOptionParserTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ELOptionParserTests.swift; sourceTree = "<group>"; };
+		D2E0C8851BC997FB008E1DBF /* ELBlockerEntry+Serialize.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ELBlockerEntry+Serialize.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,19 +76,9 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		D2302F891BC97A05004558E7 /* SwiftSerializer */ = {
-			isa = PBXGroup;
-			children = (
-				D2302F8B1BC97A13004558E7 /* Serializable.swift */,
-				D2302F8A1BC97A13004558E7 /* Array+Serializable.swift */,
-			);
-			name = SwiftSerializer;
-			sourceTree = "<group>";
-		};
 		D2A92A2A1BC9699C000DD1DC = {
 			isa = PBXGroup;
 			children = (
-				D2302F891BC97A05004558E7 /* SwiftSerializer */,
 				D2A92A361BC9699C000DD1DC /* EasyListParser */,
 				D2A92A421BC9699C000DD1DC /* EasyListParserTests */,
 				D2A92A351BC9699C000DD1DC /* Products */,
@@ -115,6 +103,7 @@
 				D2A92A501BC96A31000DD1DC /* ELFilterParser.swift */,
 				D2A92A511BC96A31000DD1DC /* ELOptionParser.swift */,
 				D2A92A531BC96A31000DD1DC /* ELParserError.swift */,
+				D2E0C8851BC997FB008E1DBF /* ELBlockerEntry+Serialize.swift */,
 				D2A92A541BC96A31000DD1DC /* ELString+Case.swift */,
 				D2A92A371BC9699C000DD1DC /* EasyListParser.h */,
 				D2A92A391BC9699C000DD1DC /* Info.plist */,
@@ -247,11 +236,10 @@
 				D2A92A5A1BC96A31000DD1DC /* ELParserError.swift in Sources */,
 				D2A92A551BC96A31000DD1DC /* ELListParser.swift in Sources */,
 				D2A92A561BC96A31000DD1DC /* ELLineParser.swift in Sources */,
-				D2302F8D1BC97A13004558E7 /* Serializable.swift in Sources */,
 				D2A92A581BC96A31000DD1DC /* ELOptionParser.swift in Sources */,
-				D2302F8C1BC97A13004558E7 /* Array+Serializable.swift in Sources */,
 				D2A92A571BC96A31000DD1DC /* ELFilterParser.swift in Sources */,
 				D2A92A5B1BC96A31000DD1DC /* ELString+Case.swift in Sources */,
+				D2E0C8861BC997FB008E1DBF /* ELBlockerEntry+Serialize.swift in Sources */,
 				D2A92A591BC96A31000DD1DC /* ELBlockerEntry.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

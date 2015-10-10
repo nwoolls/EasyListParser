@@ -27,7 +27,12 @@ class ELBlockerEntryTests: XCTestCase {
         let expected = "{\"trigger\":{},\"action\":{}}"
         
         // act
-        let actual = entry.toJsonString()
+        let actual: String?
+        do {
+            actual = try entry.serialize()
+        } catch _ {
+            actual = nil
+        }
         
         // assert
         XCTAssertEqual(expected, actual)
@@ -41,7 +46,12 @@ class ELBlockerEntryTests: XCTestCase {
         let expected = "{\"trigger\":{\"url-filter\":\"some-url-filter\"},\"action\":{\"type\":\"block\"}}"
         
         // act
-        let actual = entry.toJsonString()
+        let actual: String?
+        do {
+            actual = try entry.serialize()
+        } catch _ {
+            actual = nil
+        }
         
         // assert
         XCTAssertEqual(expected, actual)
@@ -56,7 +66,12 @@ class ELBlockerEntryTests: XCTestCase {
         let expected = "{\"trigger\":{\"url-filter\":\"some-url-filter\"},\"action\":{\"type\":\"css-display-none\",\"selector\":\"some-css-selector\"}}"
         
         // act
-        let actual = entry.toJsonString()
+        let actual: String?
+        do {
+            actual = try entry.serialize()
+        } catch _ {
+            actual = nil
+        }
         print(actual)
         
         // assert
