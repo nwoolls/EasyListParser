@@ -187,11 +187,4 @@ class ELFilterParserTests: XCTestCase {
         XCTAssert(!bad.match(regex))
     }
     
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measureBlock {
-            // Put the code you want to measure the time of here.
-        }
-    }
-    
 }
