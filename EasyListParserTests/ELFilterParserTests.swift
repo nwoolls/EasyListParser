@@ -10,17 +10,7 @@ import XCTest
 @testable import EasyListParser
 
 class ELFilterParserTests: XCTestCase {
-    
-    override func setUp() {
-        super.setUp()
-        // Put setup code here. This method is called before the invocation of each test method in the class.
-    }
-    
-    override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-        super.tearDown()
-    }
-    
+
     func testEmptyFilter() {
         // arrange
         let filter = ""
@@ -30,7 +20,7 @@ class ELFilterParserTests: XCTestCase {
         let regex = ELFilterParser.parse(filter)
         
         // assert
-        XCTAssert(good.match(regex))
+        XCTAssertTrue(good.match(regex))
     }
     
     func testBasicFilter1() {
@@ -43,8 +33,8 @@ class ELFilterParserTests: XCTestCase {
         let regex = ELFilterParser.parse(filter)
         
         // assert
-        XCTAssert(good.match(regex))
-        XCTAssert(!bad.match(regex))
+        XCTAssertTrue(good.match(regex))
+        XCTAssertFalse(bad.match(regex))
     }
     
     func testBasicFilter2() {
@@ -57,8 +47,8 @@ class ELFilterParserTests: XCTestCase {
         let regex = ELFilterParser.parse(filter)
         
         // assert
-        XCTAssert(good.match(regex))
-        XCTAssert(!bad.match(regex))
+        XCTAssertTrue(good.match(regex))
+        XCTAssertFalse(bad.match(regex))
     }
     
     func testBasicFilter3() {
@@ -71,8 +61,8 @@ class ELFilterParserTests: XCTestCase {
         let regex = ELFilterParser.parse(filter)
         
         // assert
-        XCTAssert(good.match(regex))
-        XCTAssert(!bad.match(regex))
+        XCTAssertTrue(good.match(regex))
+        XCTAssertFalse(bad.match(regex))
     }
     
     func testBasicFilter4() {
@@ -85,8 +75,8 @@ class ELFilterParserTests: XCTestCase {
         let regex = ELFilterParser.parse(filter)
         
         // assert
-        XCTAssert(good.match(regex))
-        XCTAssert(!bad.match(regex))
+        XCTAssertTrue(good.match(regex))
+        XCTAssertFalse(bad.match(regex))
     }
     
     func testCompound1() {
@@ -99,8 +89,8 @@ class ELFilterParserTests: XCTestCase {
         let regex = ELFilterParser.parse(filter)
         
         // assert
-        XCTAssert(good.match(regex))
-        XCTAssert(!bad.match(regex))
+        XCTAssertTrue(good.match(regex))
+        XCTAssertFalse(bad.match(regex))
     }
     
     func testCompound2() {
@@ -113,8 +103,8 @@ class ELFilterParserTests: XCTestCase {
         let regex = ELFilterParser.parse(filter)
         
         // assert
-        XCTAssert(good.match(regex))
-        XCTAssert(!bad.match(regex))
+        XCTAssertTrue(good.match(regex))
+        XCTAssertFalse(bad.match(regex))
     }
     
     func testBoa1() {
@@ -127,8 +117,8 @@ class ELFilterParserTests: XCTestCase {
         let regex = ELFilterParser.parse(filter)
         
         // assert
-        XCTAssert(good.match(regex))
-        XCTAssert(!bad.match(regex))
+        XCTAssertTrue(good.match(regex))
+        XCTAssertFalse(bad.match(regex))
     }
     
     func testBoa2() {
@@ -141,8 +131,8 @@ class ELFilterParserTests: XCTestCase {
         let regex = ELFilterParser.parse(filter)
         
         // assert
-        XCTAssert(good.match(regex))
-        XCTAssert(!bad.match(regex))
+        XCTAssertTrue(good.match(regex))
+        XCTAssertFalse(bad.match(regex))
     }
     
     func testEoa1() {
@@ -155,8 +145,8 @@ class ELFilterParserTests: XCTestCase {
         let regex = ELFilterParser.parse(filter)
         
         // assert
-        XCTAssert(good.match(regex))
-        XCTAssert(!bad.match(regex))
+        XCTAssertTrue(good.match(regex))
+        XCTAssertFalse(bad.match(regex))
     }
     
     func testEoa2() {
@@ -169,8 +159,8 @@ class ELFilterParserTests: XCTestCase {
         let regex = ELFilterParser.parse(filter)
         
         // assert
-        XCTAssert(good.match(regex))
-        XCTAssert(!bad.match(regex))
+        XCTAssertTrue(good.match(regex))
+        XCTAssertFalse(bad.match(regex))
     }
     
     func testSeparator1() {
@@ -183,8 +173,8 @@ class ELFilterParserTests: XCTestCase {
         let regex = ELFilterParser.parse(filter)
         
         // assert
-        XCTAssert(good.match(regex))
-        XCTAssert(!bad.match(regex))
+        XCTAssertTrue(good.match(regex))
+        XCTAssertFalse(bad.match(regex))
     }
     
 }

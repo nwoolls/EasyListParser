@@ -10,17 +10,7 @@ import XCTest
 @testable import EasyListParser
 
 class ELOptionParserTests: XCTestCase {
-    
-    override func setUp() {
-        super.setUp()
-        // Put setup code here. This method is called before the invocation of each test method in the class.
-    }
-    
-    override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-        super.tearDown()
-    }
-    
+
     func testParseMatchCase() {
         // arrange
         let options = ["match-case"]
@@ -60,9 +50,9 @@ class ELOptionParserTests: XCTestCase {
         } catch _ { }
         
         // assert
-        XCTAssert(entry.trigger.ifDomain!.contains("example.org"))
-        XCTAssert(entry.trigger.ifDomain!.contains("example.com"))
-        XCTAssert(entry.trigger.unlessDomain!.contains("google.com"))
+        XCTAssertTrue(entry.trigger.ifDomain!.contains("example.org"))
+        XCTAssertTrue(entry.trigger.ifDomain!.contains("example.com"))
+        XCTAssertTrue(entry.trigger.unlessDomain!.contains("google.com"))
     }
     
     func testParseThirdParty() {
@@ -76,7 +66,7 @@ class ELOptionParserTests: XCTestCase {
         } catch _ { }
         
         // assert
-        XCTAssert(entry.trigger.loadType!.contains("third-party"))
+        XCTAssertTrue(entry.trigger.loadType!.contains("third-party"))
     }
     
     func testParseFirstParty() {
@@ -90,7 +80,7 @@ class ELOptionParserTests: XCTestCase {
         } catch _ { }
         
         // assert
-        XCTAssert(entry.trigger.loadType!.contains("first-party"))
+        XCTAssertTrue(entry.trigger.loadType!.contains("first-party"))
     }
     
     func testParseScript() {
@@ -104,7 +94,7 @@ class ELOptionParserTests: XCTestCase {
         } catch _ { }
         
         // assert
-        XCTAssert(entry.trigger.resourceType!.contains("script"))
+        XCTAssertTrue(entry.trigger.resourceType!.contains("script"))
     }
     
     func testParseImage() {
@@ -118,7 +108,7 @@ class ELOptionParserTests: XCTestCase {
         } catch _ { }
         
         // assert
-        XCTAssert(entry.trigger.resourceType!.contains("image"))
+        XCTAssertTrue(entry.trigger.resourceType!.contains("image"))
     }
     
     func testParseStylesheet() {
@@ -132,7 +122,7 @@ class ELOptionParserTests: XCTestCase {
         } catch _ { }
         
         // assert
-        XCTAssert(entry.trigger.resourceType!.contains("style-sheet"))
+        XCTAssertTrue(entry.trigger.resourceType!.contains("style-sheet"))
     }
     
     func testParseXMLHTTPRequest() {
@@ -146,7 +136,7 @@ class ELOptionParserTests: XCTestCase {
         } catch _ { }
         
         // assert
-        XCTAssert(entry.trigger.resourceType!.contains("raw"))
+        XCTAssertTrue(entry.trigger.resourceType!.contains("raw"))
     }
     
 }
