@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		D2302F8F1BC97B2D004558E7 /* String+Regex.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2302F8E1BC97B2D004558E7 /* String+Regex.swift */; settings = {ASSET_TAGS = (); }; };
+		D26A4DFA1BCAC6E200ABBCFA /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = D26A4DF81BCAC6E200ABBCFA /* LICENSE */; settings = {ASSET_TAGS = (); }; };
+		D26A4DFB1BCAC6E200ABBCFA /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = D26A4DF91BCAC6E200ABBCFA /* README.md */; settings = {ASSET_TAGS = (); }; };
 		D2A92A381BC9699C000DD1DC /* EasyListParser.h in Headers */ = {isa = PBXBuildFile; fileRef = D2A92A371BC9699C000DD1DC /* EasyListParser.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D2A92A3F1BC9699C000DD1DC /* EasyListParser.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D2A92A341BC9699C000DD1DC /* EasyListParser.framework */; settings = {ASSET_TAGS = (); }; };
 		D2A92A551BC96A31000DD1DC /* ELListParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2A92A4E1BC96A31000DD1DC /* ELListParser.swift */; settings = {ASSET_TAGS = (); }; };
@@ -37,6 +39,8 @@
 
 /* Begin PBXFileReference section */
 		D2302F8E1BC97B2D004558E7 /* String+Regex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Regex.swift"; sourceTree = "<group>"; };
+		D26A4DF81BCAC6E200ABBCFA /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		D26A4DF91BCAC6E200ABBCFA /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		D2A92A341BC9699C000DD1DC /* EasyListParser.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = EasyListParser.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D2A92A371BC9699C000DD1DC /* EasyListParser.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EasyListParser.h; sourceTree = "<group>"; };
 		D2A92A391BC9699C000DD1DC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -79,6 +83,8 @@
 		D2A92A2A1BC9699C000DD1DC = {
 			isa = PBXGroup;
 			children = (
+				D26A4DF81BCAC6E200ABBCFA /* LICENSE */,
+				D26A4DF91BCAC6E200ABBCFA /* README.md */,
 				D2A92A361BC9699C000DD1DC /* EasyListParser */,
 				D2A92A421BC9699C000DD1DC /* EasyListParserTests */,
 				D2A92A351BC9699C000DD1DC /* Products */,
@@ -216,6 +222,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D26A4DFA1BCAC6E200ABBCFA /* LICENSE in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -239,6 +246,7 @@
 				D2A92A581BC96A31000DD1DC /* ELOptionParser.swift in Sources */,
 				D2A92A571BC96A31000DD1DC /* ELFilterParser.swift in Sources */,
 				D2A92A5B1BC96A31000DD1DC /* ELString+Case.swift in Sources */,
+				D26A4DFB1BCAC6E200ABBCFA /* README.md in Sources */,
 				D2E0C8861BC997FB008E1DBF /* ELBlockerEntry+Serialize.swift in Sources */,
 				D2A92A591BC96A31000DD1DC /* ELBlockerEntry.swift in Sources */,
 			);
