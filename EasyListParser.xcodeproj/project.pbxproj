@@ -10,6 +10,7 @@
 		D2302F8F1BC97B2D004558E7 /* String+Regex.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2302F8E1BC97B2D004558E7 /* String+Regex.swift */; settings = {ASSET_TAGS = (); }; };
 		D26A4DFA1BCAC6E200ABBCFA /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = D26A4DF81BCAC6E200ABBCFA /* LICENSE */; settings = {ASSET_TAGS = (); }; };
 		D26A4DFB1BCAC6E200ABBCFA /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = D26A4DF91BCAC6E200ABBCFA /* README.md */; settings = {ASSET_TAGS = (); }; };
+		D26A4DFD1BCACABE00ABBCFA /* ELEndToEndTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D26A4DFC1BCACABE00ABBCFA /* ELEndToEndTests.swift */; settings = {ASSET_TAGS = (); }; };
 		D2A92A381BC9699C000DD1DC /* EasyListParser.h in Headers */ = {isa = PBXBuildFile; fileRef = D2A92A371BC9699C000DD1DC /* EasyListParser.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D2A92A3F1BC9699C000DD1DC /* EasyListParser.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D2A92A341BC9699C000DD1DC /* EasyListParser.framework */; settings = {ASSET_TAGS = (); }; };
 		D2A92A551BC96A31000DD1DC /* ELListParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2A92A4E1BC96A31000DD1DC /* ELListParser.swift */; settings = {ASSET_TAGS = (); }; };
@@ -41,6 +42,7 @@
 		D2302F8E1BC97B2D004558E7 /* String+Regex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Regex.swift"; sourceTree = "<group>"; };
 		D26A4DF81BCAC6E200ABBCFA /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		D26A4DF91BCAC6E200ABBCFA /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		D26A4DFC1BCACABE00ABBCFA /* ELEndToEndTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ELEndToEndTests.swift; sourceTree = "<group>"; };
 		D2A92A341BC9699C000DD1DC /* EasyListParser.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = EasyListParser.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D2A92A371BC9699C000DD1DC /* EasyListParser.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EasyListParser.h; sourceTree = "<group>"; };
 		D2A92A391BC9699C000DD1DC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -125,6 +127,7 @@
 				D2A92A5E1BC96A47000DD1DC /* ELLineParserTests.swift */,
 				D2A92A5F1BC96A47000DD1DC /* ELListParserTests.swift */,
 				D2A92A601BC96A47000DD1DC /* ELOptionParserTests.swift */,
+				D26A4DFC1BCACABE00ABBCFA /* ELEndToEndTests.swift */,
 				D2302F8E1BC97B2D004558E7 /* String+Regex.swift */,
 				D2A92A451BC9699C000DD1DC /* Info.plist */,
 			);
@@ -260,6 +263,7 @@
 				D2A92A651BC96A47000DD1DC /* ELOptionParserTests.swift in Sources */,
 				D2302F8F1BC97B2D004558E7 /* String+Regex.swift in Sources */,
 				D2A92A631BC96A47000DD1DC /* ELLineParserTests.swift in Sources */,
+				D26A4DFD1BCACABE00ABBCFA /* ELEndToEndTests.swift in Sources */,
 				D2A92A621BC96A47000DD1DC /* ELFilterParserTests.swift in Sources */,
 				D2A92A641BC96A47000DD1DC /* ELListParserTests.swift in Sources */,
 			);
