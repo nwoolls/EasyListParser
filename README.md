@@ -13,7 +13,7 @@ let trustedDomains = ["www.reddit.com"]
 
 if let easyListURL = NSURL(string: easyListURI) {
     do {
-        let easyListContent = try String(contentsOfURL: easyListURL);
+        let easyListContent = try String(contentsOfURL: easyListURL)
         blockerEntries = ELListParser.parse(easyListContent, maxEntries: maxEntries, trustedDomains: trustedDomains)
         blockerJson = try blockerEntries.serialize()
     } catch let error as NSError {
